@@ -1,5 +1,5 @@
 # stuff common to all Linaro LEB
-include $(LOCAL_PATH)/ZeroXBenchmark.mk
+include device/linaro/common/ZeroXBenchmark.mk
 
 PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
