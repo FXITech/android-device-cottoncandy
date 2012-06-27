@@ -20,9 +20,9 @@ PRODUCT_COPY_FILES := \
         device/fxi/cottoncandy/egl.cfg:system/lib/egl/egl.cfg
 
 PRODUCT_COPY_FILES += \
-        device/fxi/cottoncandy/init.origen.rc:root/init.origen.rc \
-        device/fxi/cottoncandy/init.origen.usb.rc:root/init.origen.usb.rc \
-        device/fxi/cottoncandy/ueventd.origen.rc:root/ueventd.origen.rc \
+        device/fxi/cottoncandy/init.cottoncandy.rc:root/init.cottoncandy.rc \
+        device/fxi/cottoncandy/init.cottoncandy.usb.rc:root/init.cottoncandy.usb.rc \
+        device/fxi/cottoncandy/ueventd.cottoncandy.rc:root/ueventd.cottoncandy.rc \
         device/fxi/cottoncandy/initlogo.rle:root/initlogo.rle \
         device/fxi/cottoncandy/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
         device/fxi/cottoncandy/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \

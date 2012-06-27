@@ -1,4 +1,4 @@
-import init.origen.usb.rc
+import init.cottoncandy.usb.rc
 
 on init
     # mount debugfs
