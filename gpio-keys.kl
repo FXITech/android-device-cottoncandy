@@ -1,0 +1,6 @@
+key 158   BACK              WAKE_DROPPED
+key 139   MENU              WAKE_DROPPED
+key 102   HOME              WAKE
+key 116   ENDCALL           WAKE_DROPPED
+#key 108   ROTATOR
+key 103   POWER             WAKE
