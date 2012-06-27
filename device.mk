@@ -12,26 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/linaro/origen
+LOCAL_PATH := device/fxi/cottoncandy
 
 PRODUCT_COPY_FILES := \
 	device/linaro/common/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
-        device/linaro/origen/vold.fstab:system/etc/vold.fstab \
-        device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg
+        device/fxi/cottoncandy/vold.fstab:system/etc/vold.fstab \
+        device/fxi/cottoncandy/egl.cfg:system/lib/egl/egl.cfg
 
 PRODUCT_COPY_FILES += \
-        device/linaro/origen/init.origen.rc:root/init.origen.rc \
-        device/linaro/origen/init.origen.usb.rc:root/init.origen.usb.rc \
-        device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
-        device/linaro/origen/initlogo.rle:root/initlogo.rle \
-        device/linaro/origen/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
-        device/linaro/origen/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
-        device/linaro/origen/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-        device/linaro/common/wallpaper_info.xml:data/system/wallpaper_info.xml
+        device/fxi/cottoncandy/init.origen.rc:root/init.origen.rc \
+        device/fxi/cottoncandy/init.origen.usb.rc:root/init.origen.usb.rc \
+        device/fxi/cottoncandy/ueventd.origen.rc:root/ueventd.origen.rc \
+        device/fxi/cottoncandy/initlogo.rle:root/initlogo.rle \
+        device/fxi/cottoncandy/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
+        device/fxi/cottoncandy/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
+        device/fxi/cottoncandy/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+        device/fxi/cottoncandy/wallpaper_info.xml:data/system/wallpaper_info.xml
 
 PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-        device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
+        device/fxi/cottoncandyandroid.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
