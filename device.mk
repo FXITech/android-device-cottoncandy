@@ -59,3 +59,4 @@ DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 $(call inherit-product-if-exists, vendor/samsung/origen/device-origen.mk)
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
