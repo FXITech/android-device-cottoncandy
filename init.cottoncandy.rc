@@ -103,11 +103,8 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-# For Samsung Origen Bluetooth Feature
-service bccmd /system/bin/bccmd -t bcsp -d /dev/ttySAC0 psload -r /system/etc/firmware/bluetooth/origen.psr
-    disabled
-    oneshot
-
-service hciattach /system/bin/hciattach -s 921600 /dev/ttySAC0  bcsp 921600 flow
+service hciattach /system/bin/brcm_patchram_plus --enable_hci  \
+    --tosleep 5000 --baudrate 921600 --use_baudrate_for_download \
+    --patchram /system/etc/bluetooth/bcm4329.hcd /dev/ttySAC0
     disabled
     oneshot
