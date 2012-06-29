@@ -15,7 +15,7 @@
 LOCAL_PATH := device/fxi/cottoncandy
 
 PRODUCT_COPY_FILES := \
-	device/linaro/common/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
+        device/fxi/cottoncandy/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
         device/fxi/cottoncandy/vold.fstab:system/etc/vold.fstab \
         device/fxi/cottoncandy/egl.cfg:system/lib/egl/egl.cfg
 
@@ -31,7 +31,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-        device/fxi/cottoncandy/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
+        device/fxi/cottoncandy/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+        device/fxi/cottoncandy/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
+        device/fxi/cottoncandy/bcm4329.hcd:system/etc/bluetooth/bcm4329.hcd
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
