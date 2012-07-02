@@ -3,14 +3,14 @@
 # Product-specific compile-time definitions.
 #
 
-TARGET_BOARD_PLATFORM := origen
+TARGET_BOARD_PLATFORM := cottoncandy
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
 KERNEL_CONFIG := android_origen_defconfig
 TARGET_USE_UBOOT := true
-UBOOT_CONFIG := origen_config
+UBOOT_CONFIG := cottoncandy_config
 TARGET_USE_XLOADER := false
-XLOADER_BINARY := out/target/product/origen/obj/u-boot/mmc_spl/u-boot-mmc-spl.bin
+XLOADER_BINARY := out/target/product/cottoncandy/obj/u-boot/mmc_spl/u-boot-mmc-spl.bin
 TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_CPU_SMP := true
@@ -21,8 +21,8 @@ HARDWARE_OMX := false
 USE_CAMERA_STUB := true
 
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_HAVE_BLUETOOTH_CSR := false
+BOARD_HAVE_BLUETOOTH_BCM := false
+BOARD_HAVE_BLUETOOTH_CSR := true
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -40,6 +40,10 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 # Tuna does not use this, so should be unnecessary.  Figure it out.
 WIFI_DRIVER_MODULE_PATH := "/system/modules/bcmdhd.ko"
 WIFI_DRIVER_MODULE_NAME := "bcmdhd"
+
+
+# Set build properties
+ADDITIONAL_BUILD_PROPERTIES += ro.opengles.version=131072
 
 
 TARGET_CPU_ABI := armeabi-v7a
