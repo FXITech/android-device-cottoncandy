@@ -21,6 +21,9 @@ on boot
     setprop dev.hdmi 0
     setprop dev.videoPlayback 0
 
+    # hack for getting wlan0 working
+    setprop net.dns1 8.8.8.8
+
     # switch CPUfreq from performance to hotplug
     #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor hotplug
     #write /sys/devices/system/cpu/cpufreq/hotplug/down_threshold 30
