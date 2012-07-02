@@ -72,10 +72,11 @@ on boot
     chown system system /sys/class/graphics/fb1/overlays
 
     # owners and permissions for Bluetooth
+    setprop ro.bt.bdaddr_path "/sys/devices/platform/fxi-fxiid/mac_bt"
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+
     chmod 0660 sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-
-    insmod /system/modules/cfg80211.ko
 
 on property:dev.videoPlayback=1
     start hdmiIPC
