@@ -1,4 +1,4 @@
-# The Samsung Origen low cost board
+# Definitions for FXI Technologies Cotton Candy
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/fxi/cottoncandy/common.mk)
 $(call inherit-product, device/fxi/cottoncandy/device.mk)
