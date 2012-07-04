@@ -14,6 +14,22 @@
 
 LOCAL_PATH := device/fxi/cottoncandy
 
+include $(LOCAL_PATH)/BoardConfig.mk
+
+#ifeq ($(BOARD_USES_HGL),true)
+PRODUCT_COPY_FILES += \
+	device/samsung/smdkv310/conf/egl.cfg:system/lib/egl/egl.cfg \
+	device/samsung/exynos4/lib/mali_ump/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
+	device/samsung/exynos4/lib/mali_ump/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
+	device/samsung/exynos4/lib/mali_ump/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
+	device/samsung/exynos4/lib/mali_ump/libMali.so:system/lib/libMali.so \
+	device/samsung/exynos4/lib/mali_ump/libMali.so:obj/lib/libMali.so \
+	device/samsung/exynos4/lib/mali_ump/libUMP.so:system/lib/libUMP.so \
+	device/samsung/exynos4/lib/mali_ump/libUMP.so:obj/lib/libUMP.so \
+	device/samsung/exynos4/lib/mali_ump/libion.so:system/lib/libion.so \
+	device/samsung/exynos4/lib/mali_ump/libion.so:obj/lib/libion.so
+#endif
+
 PRODUCT_COPY_FILES := \
         device/fxi/cottoncandy/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
         device/fxi/cottoncandy/vold.fstab:system/etc/vold.fstab \
@@ -43,8 +59,18 @@ PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
 
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
+PRODUCT_COPY_FILES += \
+	frameworks/base/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
+$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
 
+# we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+PRODUCT_PROPERTY_OVERRIDES := \
+	ro.opengles.version=131072
+
 
 PRODUCT_PACKAGES += \
         librs_jni \
@@ -54,6 +80,86 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs
+
+
+# Samsung BSP libraries
+PRODUCT_PACKAGES += \
+	libsecosal \
+	libSEC_OMX_CORE
+
+## audio
+#PRODUCT_PACKAGES += \
+#	audio_policy.smdkv310 \
+#	audio.primary.smdkv310 \
+#	audio.a2dp.default \
+#	libaudioutils
+#
+## ULP Audio
+#ifeq ($(USE_ULP_AUDIO),true)
+#PRODUCT_PACKAGES += \
+#	libaudiohw \
+#	MusicULP \
+#	libsa_jni
+#endif
+
+# ALP Audio
+ifeq ($(BOARD_USE_ALP_AUDIO),true)
+PRODUCT_PACKAGES += \
+	libOMX.SEC.MP3.Decoder
+endif
+
+## Camera
+#PRODUCT_PACKAGES += \
+#	camera.smdkv310
+
+# Libs
+PRODUCT_PACKAGES += \
+	libcamera \
+	libstagefrighthw \
+	com.android.future.usb.accessory
+
+## Video Editor
+#PRODUCT_PACKAGES += \
+#	VideoEditorGoogle
+
+## Misc other modules
+#PRODUCT_PACKAGES += \
+#	lights.smdkv310 \
+	gralloc.smdkv310
+
+PRODUCT_PACKAGES += \
+	hwcomposer.exynos4
+
+# OpenMAX IL configuration files
+PRODUCT_COPY_FILES += \
+	device/samsung/smdkv310/media_profiles.xml:system/etc/media_profiles.xml
+
+# OpenMAX IL modules
+PRODUCT_PACKAGES += \
+	libSEC_OMX_Core \
+	libSEC_OMX_Resourcemanager \
+	libOMX.SEC.AVC.Decoder \
+	libOMX.SEC.M4V.Decoder \
+	libOMX.SEC.M4V.Encoder \
+	libOMX.SEC.AVC.Encoder
+
+## hwconvertor modules
+#PRODUCT_PACKAGES += \
+#	libhwconverter \
+
+# MFC firmware
+PRODUCT_COPY_FILES += \
+	device/samsung/exynos4/firmware/mfc_fw.bin:system/etc/firmware/mfc_fw.bin
+
+## Input device calibration files
+#PRODUCT_COPY_FILES += \
+#	device/samsung/smdkv310/S3C24XX_TouchScreen.idc:system/usr/idc/S3C24XX_TouchScreen.idc \
+#	device/samsung/smdkv310/s5pc210_ts.idc:system/usr/idc/s5pc210_ts.idc \
+
+PRODUCT_COPY_FILES += \
+	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
