@@ -4,6 +4,7 @@
 #
 
 TARGET_BOARD_PLATFORM := cottoncandy
+TARGET_SOC := exynos4210
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
 KERNEL_CONFIG := android_origen_defconfig
@@ -17,8 +18,11 @@ TARGET_CPU_SMP := true
 BOARD_USES_GENERIC_AUDIO := true
 BOARD_USES_ALSA_AUDIO := true
 OMAP_ENHANCEMENT := false
-HARDWARE_OMX := false
+HARDWARE_OMX := true
 USE_CAMERA_STUB := true
+BOARD_USES_HGL := true
+
+BOARD_USES_V4L2 := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := false
@@ -43,7 +47,7 @@ WIFI_DRIVER_MODULE_NAME := "bcmdhd"
 
 
 # Set build properties
-ADDITIONAL_BUILD_PROPERTIES += ro.opengles.version=131072
+#ADDITIONAL_BUILD_PROPERTIES += ro.opengles.version=131072
 
 
 TARGET_CPU_ABI := armeabi-v7a
