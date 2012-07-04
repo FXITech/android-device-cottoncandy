@@ -19,15 +19,15 @@ include $(LOCAL_PATH)/BoardConfig.mk
 #ifeq ($(BOARD_USES_HGL),true)
 PRODUCT_COPY_FILES += \
 	device/samsung/smdkv310/conf/egl.cfg:system/lib/egl/egl.cfg \
-	device/samsung/exynos4/lib/mali_ump/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
-	device/samsung/exynos4/lib/mali_ump/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-	device/samsung/exynos4/lib/mali_ump/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-	device/samsung/exynos4/lib/mali_ump/libMali.so:system/lib/libMali.so \
-	device/samsung/exynos4/lib/mali_ump/libMali.so:obj/lib/libMali.so \
-	device/samsung/exynos4/lib/mali_ump/libUMP.so:system/lib/libUMP.so \
-	device/samsung/exynos4/lib/mali_ump/libUMP.so:obj/lib/libUMP.so \
-	device/samsung/exynos4/lib/mali_ump/libion.so:system/lib/libion.so \
-	device/samsung/exynos4/lib/mali_ump/libion.so:obj/lib/libion.so
+	device/fxi/exynos4/lib/mali_ump/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
+	device/fxi/exynos4/lib/mali_ump/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
+	device/fxi/exynos4/lib/mali_ump/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
+	device/fxi/exynos4/lib/mali_ump/libMali.so:system/lib/libMali.so \
+	device/fxi/exynos4/lib/mali_ump/libMali.so:obj/lib/libMali.so \
+	device/fxi/exynos4/lib/mali_ump/libUMP.so:system/lib/libUMP.so \
+	device/fxi/exynos4/lib/mali_ump/libUMP.so:obj/lib/libUMP.so \
+	device/fxi/exynos4/lib/mali_ump/libion.so:system/lib/libion.so \
+	device/fxi/exynos4/lib/mali_ump/libion.so:obj/lib/libion.so
 #endif
 
 PRODUCT_COPY_FILES := \
@@ -84,8 +84,8 @@ PRODUCT_PACKAGES += \
 
 # Samsung BSP libraries
 PRODUCT_PACKAGES += \
-	libsecosal \
 	libSEC_OMX_CORE
+#	libsecosal \
 
 ## audio
 #PRODUCT_PACKAGES += \
@@ -149,7 +149,7 @@ PRODUCT_PACKAGES += \
 
 # MFC firmware
 PRODUCT_COPY_FILES += \
-	device/samsung/exynos4/firmware/mfc_fw.bin:system/etc/firmware/mfc_fw.bin
+	device/fxi/exynos4/firmware/mfc_fw.bin:system/etc/firmware/mfc_fw.bin
 
 ## Input device calibration files
 #PRODUCT_COPY_FILES += \
