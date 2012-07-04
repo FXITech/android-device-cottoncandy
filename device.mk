@@ -16,9 +16,7 @@ LOCAL_PATH := device/fxi/cottoncandy
 
 include $(LOCAL_PATH)/BoardConfig.mk
 
-#ifeq ($(BOARD_USES_HGL),true)
 PRODUCT_COPY_FILES += \
-	device/samsung/smdkv310/conf/egl.cfg:system/lib/egl/egl.cfg \
 	device/fxi/exynos4/lib/mali_ump/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
 	device/fxi/exynos4/lib/mali_ump/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
 	device/fxi/exynos4/lib/mali_ump/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
@@ -28,9 +26,8 @@ PRODUCT_COPY_FILES += \
 	device/fxi/exynos4/lib/mali_ump/libUMP.so:obj/lib/libUMP.so \
 	device/fxi/exynos4/lib/mali_ump/libion.so:system/lib/libion.so \
 	device/fxi/exynos4/lib/mali_ump/libion.so:obj/lib/libion.so
-#endif
 
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
         device/fxi/cottoncandy/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
         device/fxi/cottoncandy/vold.fstab:system/etc/vold.fstab \
         device/fxi/cottoncandy/egl.cfg:system/lib/egl/egl.cfg
@@ -55,7 +52,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         persist.sys.usb.config=mtp
 
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
         hwui.render_dirty_regions=false
 
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
@@ -68,7 +65,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072
 
 
@@ -125,10 +122,10 @@ PRODUCT_PACKAGES += \
 ## Misc other modules
 #PRODUCT_PACKAGES += \
 #	lights.smdkv310 \
-	gralloc.smdkv310
+#	gralloc.smdkv310
 
 PRODUCT_PACKAGES += \
-	hwcomposer.exynos4
+	hwcomposer.cottoncandy
 
 # OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
@@ -144,8 +141,8 @@ PRODUCT_PACKAGES += \
 	libOMX.SEC.AVC.Encoder
 
 ## hwconvertor modules
-#PRODUCT_PACKAGES += \
-#	libhwconverter \
+PRODUCT_PACKAGES += \
+	libhwconverter \
 
 # MFC firmware
 PRODUCT_COPY_FILES += \
