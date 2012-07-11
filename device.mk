@@ -1,4 +1,4 @@
-# Copyright (C) 2011 Linaro Limited
+# Copyright (C) 2012 FXI Technologies AS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -66,7 +66,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=131072
+	ro.opengles.version=131072 \
+	wifi.interface=wlan0
 
 
 PRODUCT_PACKAGES += \
