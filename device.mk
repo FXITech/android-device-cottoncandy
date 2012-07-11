@@ -124,8 +124,8 @@ PRODUCT_PACKAGES += \
 #	lights.smdkv310 \
 #	gralloc.smdkv310
 
-PRODUCT_PACKAGES += \
-	hwcomposer.cottoncandy
+#PRODUCT_PACKAGES += \
+#	hwcomposer.cottoncandy
 
 # OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
