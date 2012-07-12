@@ -17,17 +17,6 @@ LOCAL_PATH := device/fxi/cottoncandy
 include $(LOCAL_PATH)/BoardConfig.mk
 
 PRODUCT_COPY_FILES += \
-	device/fxi/exynos4/lib/mali_ump/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
-	device/fxi/exynos4/lib/mali_ump/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-	device/fxi/exynos4/lib/mali_ump/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-	device/fxi/exynos4/lib/mali_ump/libMali.so:system/lib/libMali.so \
-	device/fxi/exynos4/lib/mali_ump/libMali.so:obj/lib/libMali.so \
-	device/fxi/exynos4/lib/mali_ump/libUMP.so:system/lib/libUMP.so \
-	device/fxi/exynos4/lib/mali_ump/libUMP.so:obj/lib/libUMP.so \
-	device/fxi/exynos4/lib/mali_ump/libion.so:system/lib/libion.so \
-	device/fxi/exynos4/lib/mali_ump/libion.so:obj/lib/libion.so
-
-PRODUCT_COPY_FILES += \
         device/fxi/cottoncandy/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
         device/fxi/cottoncandy/vold.fstab:system/etc/vold.fstab \
         device/fxi/cottoncandy/egl.cfg:system/lib/egl/egl.cfg
