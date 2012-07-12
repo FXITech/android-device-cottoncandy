@@ -121,9 +121,8 @@ PRODUCT_PACKAGES += \
 #	VideoEditorGoogle
 
 ## Misc other modules
-#PRODUCT_PACKAGES += \
-#	lights.smdkv310 \
-#	gralloc.smdkv310
+PRODUCT_PACKAGES += \
+	gralloc.cottoncandy
 
 #PRODUCT_PACKAGES += \
 #	hwcomposer.cottoncandy
