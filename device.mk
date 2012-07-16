@@ -75,9 +75,10 @@ PRODUCT_PACKAGES += \
 #	libsecosal \
 
 ## audio
-#PRODUCT_PACKAGES += \
-#	audio_policy.smdkv310 \
-#	audio.primary.smdkv310 \
+PRODUCT_PACKAGES += \
+	audio_policy.cottoncandy \
+	audio.primary.cottoncandy 
+
 #	audio.a2dp.default \
 #	libaudioutils
 #
