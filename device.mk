@@ -96,8 +96,8 @@ PRODUCT_PACKAGES += \
 endif
 
 ## Camera
-#PRODUCT_PACKAGES += \
-#	camera.smdkv310
+PRODUCT_PACKAGES += \
+	camera.cottoncandy
 
 # Libs
 PRODUCT_PACKAGES += \
