@@ -60,19 +60,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 PRODUCT_PACKAGES += \
-        librs_jni \
-        com.android.future.usb.accessory \
-	camera.origen
+        librs_jni 
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs
 
-
-# Samsung BSP libraries
-PRODUCT_PACKAGES += \
-	libSEC_OMX_CORE
-#	libsecosal \
 
 ## audio
 PRODUCT_PACKAGES += \
@@ -123,6 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # OpenMAX IL modules
 PRODUCT_PACKAGES += \
+	libsecosal \
 	libSEC_OMX_Core \
 	libSEC_OMX_Resourcemanager \
 	libOMX.SEC.AVC.Decoder \
