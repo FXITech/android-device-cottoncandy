@@ -1,9 +1,10 @@
 # Mount MMC partitions
 on fs
-	# mmcblk0p1: /sdcard
-	mount ext4 /dev/block/mmcblk0p2 /system wait ro
+	# mmcblk0p1: /sdcard (fat partition)
+	# mmcblk0p2: /
+	mount ext4 /dev/block/mmcblk0p3 /system wait ro
 	chmod 0755 /system
-	mount ext4 /dev/block/mmcblk0p3 /cache wait
 	# mmcblk0p4: extended partition container
-	mount ext4 /dev/block/mmcblk0p5 /data wait
-	# mmcblk0p6: /sdcard
+	mount ext4 /dev/block/mmcblk0p5 /cache wait
+	mount ext4 /dev/block/mmcblk0p6 /data wait
+	# mmcblk0p7: FusionX FAT partition
