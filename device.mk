@@ -129,6 +129,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libhwconverter
 
+PRODUCT_PACKAGES += \
+	brcm_patchram_plus
+
 # MFC firmware
 PRODUCT_COPY_FILES += \
 	device/fxi/exynos4/firmware/mfc_fw.bin:system/etc/firmware/s5p-mfc.fw
