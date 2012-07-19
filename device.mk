@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libcamera \
 	libstagefrighthw \
+	libfimc \
 	com.android.future.usb.accessory
 
 ## Video Editor
@@ -126,11 +127,11 @@ PRODUCT_PACKAGES += \
 
 ## hwconvertor modules
 PRODUCT_PACKAGES += \
-	libhwconverter \
+	libhwconverter
 
 # MFC firmware
 PRODUCT_COPY_FILES += \
-	device/fxi/exynos4/firmware/mfc_fw.bin:system/etc/firmware/mfc_fw.bin
+	device/fxi/exynos4/firmware/mfc_fw.bin:system/etc/firmware/s5p-mfc.fw
 
 ## Input device calibration files
 #PRODUCT_COPY_FILES += \
