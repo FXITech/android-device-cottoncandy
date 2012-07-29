@@ -93,6 +93,12 @@ endif
 PRODUCT_PACKAGES += \
 	camera.cottoncandy
 
+ifeq ($(BOARD_USE_BELLAGIO_OMX),true)
+PRODUCT_PACKAGES += \
+	omxregister-bellagio \
+	libomxil-bellagio_lib
+endif
+
 # Libs
 PRODUCT_PACKAGES += \
 	libcamera \
