@@ -7,7 +7,7 @@ TARGET_BOARD_PLATFORM := cottoncandy
 TARGET_SOC := exynos4210
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
-KERNEL_CONFIG := android_origen_defconfig
+KERNEL_CONFIG := fxi_c210_android_defconfig
 TARGET_USE_UBOOT := true
 UBOOT_CONFIG := cottoncandy_config
 TARGET_USE_XLOADER := false
@@ -22,13 +22,13 @@ OMAP_ENHANCEMENT := false
 HARDWARE_OMX := true
 BOARD_USE_ANB := true
 BOARD_USE_CSC_FIMC := true
-BOARD_USE_V4L2_ION := false
 # BOARD_USE_BELLAGIO_OMX := true
 
 USE_CAMERA_STUB := true
 BOARD_USES_HGL := true
 BOARD_USES_I2S_AUDIO := true
 BOARD_USE_V4L2 := true
+BOARD_USE_V4L2_ION := false
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
