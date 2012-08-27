@@ -104,6 +104,10 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
     disabled
     oneshot
 
+service fusionxd /system/bin/fusionx_master
+    class core
+    critical
+
 service iprenew_wlan0 /system/bin/dhcpcd -n
     class main
     disabled

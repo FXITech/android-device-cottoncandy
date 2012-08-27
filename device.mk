@@ -99,6 +99,11 @@ PRODUCT_PACKAGES += \
 	libomxil-bellagio_lib
 endif
 
+ifeq ($(BOARD_USES_FUSIONX), true)
+PRODUCT_PACKAGES += \
+	fusionx_master
+endif
+
 # Libs
 PRODUCT_PACKAGES += \
 	libcamera \
