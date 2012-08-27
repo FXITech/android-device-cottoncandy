@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
 	fusionx_master
 endif
 
+PRODUCT_COPY_FILES += \
+	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
+
 # Libs
 PRODUCT_PACKAGES += \
 	libcamera \
