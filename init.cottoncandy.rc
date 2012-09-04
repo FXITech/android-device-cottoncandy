@@ -77,6 +77,23 @@ on boot
     setprop ro.bt.bdaddr_path "/sys/devices/platform/fxi-fxiid/mac_bt"
     chown bluetooth bluetooth ro.bt.bdaddr_path
 
+    # permission HACKS to get fusionx running as user media
+    # remove this as soon as the signal mechanism between
+    # fusionx_master and android libs have been replaced
+    # with something better
+    chmod 666 /dev/block/mmcblk0p7
+    chown media media /dev/block/mmcblk0p7
+    chmod 666 /dev/fxichardev
+    chown media media /dev/fxichardev
+    chmod 666 /dev/uinput
+    chown media media /dev/uinput
+    chmod 666 /dev/video8
+    chown media media /dev/video8
+    chmod 666 /dev/video9
+    chown media media /dev/video9
+    chmod 666 /dev/net/tun
+    chown media media /dev/net/tun
+
     chmod 0660 sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
 
@@ -106,7 +123,8 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
 
 service fusionxd /system/bin/fusionx_master
     class core
-    critical
+    user media
+    oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
     class main
