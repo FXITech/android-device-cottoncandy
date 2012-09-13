@@ -56,7 +56,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072 \
-	wifi.interface=wlan0
+	wifi.interface=wlan0 \
 	persist.service.adb.enable=1
 
 PRODUCT_PACKAGES += \
