@@ -56,7 +56,7 @@ WIFI_DRIVER_MODULE_NAME := "bcmdhd"
 
 
 # Set build properties
-#ADDITIONAL_BUILD_PROPERTIES += ro.opengles.version=131072
+ADDITIONAL_BUILD_PROPERTIES += persist.service.adb.enable=1
 
 
 TARGET_CPU_ABI := armeabi-v7a

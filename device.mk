@@ -57,7 +57,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072 \
 	wifi.interface=wlan0
-
+	persist.service.adb.enable=1
 
 PRODUCT_PACKAGES += \
         librs_jni 
@@ -66,6 +66,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         make_ext4fs
 
+# FXI Config app
+PRODUCT_PACKAGES += \
+	fxiconfig
 
 ## audio
 PRODUCT_PACKAGES += \
@@ -103,6 +106,11 @@ ifeq ($(BOARD_USES_FUSIONX), true)
 PRODUCT_PACKAGES += \
 	fusionx_master
 endif
+
+# Add opcontrol and oprofiled for profiling using oprofile
+PRODUCT_PACKAGES += \
+	opcontrol \
+	oprofiled
 
 PRODUCT_COPY_FILES += \
 	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
