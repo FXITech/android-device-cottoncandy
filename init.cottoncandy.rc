@@ -99,11 +99,8 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
 
 on post-fs-data
-   mkdir -p /data/fxi/config
-   chmod 0775 /data/fxi
-   chmod 0775 /data/fxi/config
-   chown system system /data/fxi
-   chown system system /data/fxi/config	
+   mkdir /data/fxi 0775 system system
+   mkdir /data/fxi/config 0775 system system
 
 on property:dev.videoPlayback=1
     start hdmiIPC
