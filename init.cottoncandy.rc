@@ -14,7 +14,6 @@ on init
     write /sys/kernel/debug/pm_debug/smartreflex/sr_mpu/autocomp 1
 
 on boot
-    setprop persist.service.adb.enable 1
     setprop hw.nobattery true
     setprop ro.build.product exynos4
     setprop ro.product.device exynos4
