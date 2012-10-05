@@ -134,8 +134,11 @@ PRODUCT_PACKAGES += \
 
 # OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-	device/samsung/smdkv310/media_profiles.xml:system/etc/media_profiles.xml
+	device/fxi/cottoncandy/media_profiles.xml:system/etc/media_profiles.xml
 
+
+# Open Source build has to copy these from one of our binary images for now.
+ifeq ($(TARGET_BUILD_OPENSOURCE), false)
 # OpenMAX IL modules
 PRODUCT_PACKAGES += \
 	libsecosal \
@@ -147,6 +150,8 @@ PRODUCT_PACKAGES += \
 	libOMX.SEC.M4V.Decoder \
 	libOMX.SEC.M4V.Encoder \
 	libOMX.SEC.AVC.Encoder
+endif
+
 
 ## hwconvertor modules
 PRODUCT_PACKAGES += \
@@ -157,12 +162,7 @@ PRODUCT_PACKAGES += \
 
 # MFC firmware
 PRODUCT_COPY_FILES += \
-	device/fxi/exynos4/firmware/mfc_fw.bin:system/etc/firmware/s5p-mfc.fw
-
-## Input device calibration files
-#PRODUCT_COPY_FILES += \
-#	device/samsung/smdkv310/S3C24XX_TouchScreen.idc:system/usr/idc/S3C24XX_TouchScreen.idc \
-#	device/samsung/smdkv310/s5pc210_ts.idc:system/usr/idc/s5pc210_ts.idc \
+	device/fxi/cottoncandy/mfc_fw.bin:system/etc/firmware/s5p-mfc.fw
 
 PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
