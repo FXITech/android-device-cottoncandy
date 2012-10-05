@@ -105,15 +105,14 @@ endif
 ifeq ($(BOARD_USES_FUSIONX), true)
 PRODUCT_PACKAGES += \
 	fusionx_master
+PRODUCT_COPY_FILES += \
+	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
 endif
 
 # Add opcontrol and oprofiled for profiling using oprofile
 PRODUCT_PACKAGES += \
 	opcontrol \
 	oprofiled
-
-PRODUCT_COPY_FILES += \
-	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
 
 # Libs
 PRODUCT_PACKAGES += \
