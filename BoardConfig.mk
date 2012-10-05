@@ -3,6 +3,8 @@
 # Product-specific compile-time definitions.
 #
 
+TARGET_BUILD_OPENSOURCE ?= false
+
 TARGET_BOARD_PLATFORM := cottoncandy
 TARGET_SOC := exynos4210
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
