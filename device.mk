@@ -108,6 +108,15 @@ PRODUCT_COPY_FILES += \
 	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
 endif
 
+ifeq ($(BOARD_USE_MALI), true)
+PRODUCT_PACKAGES += \
+	libMali \
+	libGLESv1_CM_mali \
+	libGLESv2_mali \
+	libEGL_mali \
+	libGLESv2
+endif
+
 # Add opcontrol and oprofiled for profiling using oprofile
 PRODUCT_PACKAGES += \
 	opcontrol \
