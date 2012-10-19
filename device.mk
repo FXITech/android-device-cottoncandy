@@ -69,11 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	fxiconfig
 
-## audio
-PRODUCT_PACKAGES += \
-	audio_policy.cottoncandy \
-	audio.primary.cottoncandy 
-
 #	audio.a2dp.default \
 #	libaudioutils
 #
@@ -101,33 +96,10 @@ PRODUCT_PACKAGES += \
 	libomxil-bellagio_lib
 endif
 
-ifeq ($(BOARD_USES_FUSIONX), true)
-PRODUCT_PACKAGES += \
-	fusionx_master
-PRODUCT_COPY_FILES += \
-	device/fxi/fusionx/build/arm_ics/fusionx.conf:system/etc/fusionx.conf
-endif
-
-ifeq ($(BOARD_USE_MALI), true)
-PRODUCT_PACKAGES += \
-	libMali \
-	libGLESv1_CM_mali \
-	libGLESv2_mali \
-	libEGL_mali \
-	libGLESv2
-endif
-
 # Add opcontrol and oprofiled for profiling using oprofile
 PRODUCT_PACKAGES += \
 	opcontrol \
 	oprofiled
-
-# Libs
-PRODUCT_PACKAGES += \
-	libcamera \
-	libstagefrighthw \
-	libfimc \
-	com.android.future.usb.accessory
 
 ## Video Editor
 #PRODUCT_PACKAGES += \
@@ -144,26 +116,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	device/fxi/cottoncandy/media_profiles.xml:system/etc/media_profiles.xml
 
-
-# Open Source build has to copy these from one of our binary images for now.
-ifeq ($(TARGET_BUILD_OPENSOURCE), false)
-# OpenMAX IL modules
-PRODUCT_PACKAGES += \
-	libsecosal \
-	libSEC_OMX_Core \
-	libSEC_OMX_Resourcemanager \
-	libOMX.SEC.WMV.Decoder \
-	libOMX.SEC.VP8.Decoder \
-	libOMX.SEC.AVC.Decoder \
-	libOMX.SEC.M4V.Decoder \
-	libOMX.SEC.M4V.Encoder \
-	libOMX.SEC.AVC.Encoder
-endif
-
-
-## hwconvertor modules
-PRODUCT_PACKAGES += \
-	libhwconverter
 
 PRODUCT_PACKAGES += \
 	brcm_patchram_plus
