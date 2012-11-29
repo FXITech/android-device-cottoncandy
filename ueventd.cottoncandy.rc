@@ -8,3 +8,4 @@
    /dev/s5p-rp           0666    system    audio
    /dev/s5p-rp_ctrl      0666    system    audio
    /dev/graphics/*       0666    root      graphics
+   /dev/snd/*            0666    system    audio
