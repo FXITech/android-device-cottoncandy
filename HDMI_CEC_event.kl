@@ -1,0 +1,24 @@
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 28    ENTER
+key 103   DPAD_UP           WAKE_DROPPED
+key 105   DPAD_LEFT         WAKE_DROPPED
+key 106   DPAD_RIGHT        WAKE_DROPPED
+key 108   DPAD_DOWN         WAKE_DROPPED
+key 119   MENU              WAKE_DROPPED
+key 161   HOME              WAKE
+key 174   BACK              WAKE_DROPPED
+key 353   ENTER
+key 398   F12               WAKE
+key 399   SPACE             WAKE_DROPPED
+key 400   MENU              WAKE_DROPPED
+key 401   HOME              WAKE_DROPPED
+

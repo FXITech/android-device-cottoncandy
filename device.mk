@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
         device/fxi/cottoncandy/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
         device/fxi/cottoncandy/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
         device/fxi/cottoncandy/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-        device/fxi/cottoncandy/wallpaper_info.xml:data/system/wallpaper_info.xml
+        device/fxi/cottoncandy/wallpaper_info.xml:data/system/wallpaper_info.xml \
+        device/fxi/cottoncandy/HDMI_CEC_event.kl:system/usr/keylayout/HDMI_CEC_event.kl
 
 PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
