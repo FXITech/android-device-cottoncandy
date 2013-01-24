@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         make_ext4fs
 
+# su to become superuser
+PRODUCT_PACKAGES += \
+	su
+
 # FXI Config app
 PRODUCT_PACKAGES += \
 	fxiconfig
