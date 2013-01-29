@@ -13,3 +13,12 @@
 ######################
 
 dev_mount SDCARD /mnt/sdcard 1 /devices/platform/exynos4-sdhci.2/mmc_host/mmc0
+dev_mount usb1.0 /mnt/usb1.0 auto /devices/platform/s5p-ehci/usb1/1-1/1-1:1.0
+dev_mount usb1.1 /mnt/usb1.1 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.1
+dev_mount usb1.2 /mnt/usb1.2 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.2
+dev_mount usb1.3 /mnt/usb1.3 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.3
+dev_mount usb1.4 /mnt/usb1.4 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.4
+dev_mount usb1.5 /mnt/usb1.5 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.5
+dev_mount usb1.6 /mnt/usb1.6 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.6
+dev_mount usb1.7 /mnt/usb1.7 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.7
+dev_mount usb1.8 /mnt/usb1.8 auto /devices/platform/s5p-ehci/usb1/1-1/1-1.8
