@@ -88,6 +88,16 @@ on boot
 on post-fs-data
    mkdir /data/fxi 0775 system system
    mkdir /data/fxi/config 0775 system system
+   mkdir /mnt/usb1.0 0775 system system
+   mkdir /mnt/usb1.1 0775 system system
+   mkdir /mnt/usb1.2 0775 system system
+   mkdir /mnt/usb1.3 0775 system system
+   mkdir /mnt/usb1.4 0775 system system
+   mkdir /mnt/usb1.5 0775 system system
+   mkdir /mnt/usb1.6 0775 system system
+   mkdir /mnt/usb1.7 0775 system system
+   mkdir /mnt/usb1.8 0775 system system
+
 
 on property:dev.videoPlayback=1
     start hdmiIPC
