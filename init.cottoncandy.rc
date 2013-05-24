@@ -71,8 +71,8 @@ on boot
     # with something better
     chmod 666 /dev/block/mmcblk0p7
     chown media media /dev/block/mmcblk0p7
-    chmod 666 /dev/fxichardev
-    chown media media /dev/fxichardev
+    chmod 666 /dev/ccanyscrn
+    chown media media /dev/ccanyscrn
     chmod 666 /dev/uinput
     chown media media /dev/uinput
     chmod 666 /dev/video8
