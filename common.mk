@@ -45,6 +45,7 @@ PRODUCT_PACKAGES := \
     tinyplay \
     tinycap \
     tinymix \
+    tinypcminfo \
     libaudioutils \
     ConnectivityManagerTest \
     iozone \
