@@ -1,6 +1,3 @@
-# stuff common to all Linaro LEB
-include device/linaro/common/ZeroXBenchmark.mk
-
 PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
     AlarmClock \
