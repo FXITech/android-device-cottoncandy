@@ -22,12 +22,10 @@ PRODUCT_PACKAGES := \
     CalendarProvider \
     SyncProvider \
     faketsd \
-    ZeroXBenchmark \
     hwcomposer.default \
     libmicro \
     powertop \
     mmtest \
-    $(ZEROXBENCHMARK_NATIVE_APPS) \
     GLMark2 \
     libglmark2-android \
     gatord \
