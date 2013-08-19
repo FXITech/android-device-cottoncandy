@@ -26,14 +26,7 @@ PRODUCT_PACKAGES := \
     libmicro \
     powertop \
     mmtest \
-    GLMark2 \
-    libglmark2-android \
     gatord \
-    LinaroWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    VisualizationWallpapers \
     librs_jni \
     mediaframeworktest \
     libtinyalsa \
@@ -51,17 +44,7 @@ PRODUCT_PACKAGES := \
     libncurses \
     htop
 
-#packages we are using for benchmarking
-PRODUCT_PACKAGES += \
-    v8shell \
-    skia_bench
-
-V8BENCHMARKS := $(foreach js,$(wildcard $(TOP)/external/v8/benchmarks/*.js),\
-	$(js):data/benchmark/v8/$(notdir $(js)))
-
 PRODUCT_COPY_FILES := \
 	device/linaro/common/wallpaper_info.xml:data/system/wallpaper_info.xml \
-	device/linaro/common/disablesuspend.sh:system/bin/disablesuspend.sh \
-	$(V8BENCHMARKS)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)

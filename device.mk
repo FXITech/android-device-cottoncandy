@@ -60,7 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0
 
 PRODUCT_PACKAGES += \
-        librs_jni 
+        librs_jni
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -131,8 +131,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
-
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
